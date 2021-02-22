@@ -4,7 +4,7 @@ from threading import Thread
 import random
 
 HOST = "localhost"
-PORT = 1234
+PORT = 8888
 QUEUE_LEN = 11
 CODING = "utf-8"
 

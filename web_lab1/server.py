@@ -2,7 +2,7 @@ from socket import socket, AF_INET, SOCK_STREAM, SO_RCVBUF, SOL_SOCKET
 from threading import Thread
 
 HOST = "localhost"
-PORT = 1234
+PORT = 8888
 QUEUE_LEN = 11
 CODING = "utf-8"
 

@@ -3,7 +3,7 @@ import socket
 import select
 
 HOST = 'localhost'
-PORT = 1234
+PORT = 1235
 BACKLOG_SIZE = 10
 SELECT_TIMEOUT = None
 RECEIVE_BUFF_SIZE = 1024
@@ -17,36 +17,28 @@ def calculation(payload):
 
 def http_creator(mes,host,port,version):
     content_type="text/html"
-    http = ""
+    http = {
 
-    http += f"POST HTTP/{version} 200 OK\n"
-    http += f"Host: {host}:{port}\n"
-    http += f"Content-Type: {content_type}\n"
-    http += f"Content-Length: {len(str(mes))}"
-    http += '\n\n'
-    http += f"{mes}"
+     "Url": f"GET HTTP/{version} 200 OK\n",
+     "Host": host ,
+     "Port": port,
+     "Content-Type": content_type,
+     "Content-Length": len(str(mes)),
+     "Body": mes
+    }
     return http
 
-def deparsing_header(http):
-    a = json.loads(http.decode())
-    Headlines, body = a.split('\n\n')
-    Head = Headlines.split('\n')
-    head_dict = {"Metod": Head[0].split()[0],
-                 "Url": Head[0].split()[1],
-                 "Host": (Head[1].split()[1]).split(':')[0],
-                 "Port": (Head[1].split()[1]).split(':')[1],
-                 "Type": (Head[2].split()[1]).split('/')[0],
-                 "Version": (Head[2].split()[1]).split('/')[1],
-                 "Length": Head[3].split()[1]
+
+def deparsing(http):
+    a=json.loads(http.decode())
+    body=a.get("Body")
+    head_dict = {
+                 "Host": a.get("Host"),
+                 "Port": a.get("Port"),
+                 "Type": a.get("Content-Type"),
+                 "Length": a.get("Content-Length")
                  }
     print(head_dict)
-    return head_dict
-
-
-
-def deparsing_body(http):
-    a=json.loads(http.decode())
-    Headlines, body = a.split('\n\n')
     return body
 
 def main():
@@ -79,8 +71,7 @@ def main():
 
                 if payload is not None:
                     readList.remove(rSocket)
-                    response = calculation(deparsing_body(payload))
-                    deparsing_header(payload)
+                    response = calculation(deparsing(payload))
                     responsesMap[rSocket] = json.dumps(http_creator(response,HOST,PORT,"Marochkanych")).encode()
                     writeList.append(rSocket)
 

@@ -4,7 +4,7 @@ from threading import Thread
 import random
 
 HOST = "localhost"
-PORT = 1234
+PORT = 1235
 QUEUE_LEN = 9+92-90
 CODING = "utf-8"
 
@@ -14,34 +14,28 @@ def read_from_socket(s: socket) -> bytearray:
         data = s.recv(buff_size)
         return data
 
-def deparsing_header(http):
-    Headlines, body = http.split('\n\n')
-    Head = Headlines.split('\n')
-    head_dict = {"Metod": Head[0].split()[0],
-                 "Url": Head[0].split()[1],
-                 "Host": (Head[1].split()[1]).split(':')[0],
-                 "Port": (Head[1].split()[1]).split(':')[1],
-                 "Type": (Head[2].split()[1]).split('/')[0],
-                 "Version": (Head[2].split()[1]).split('/')[1],
-                 "Length": Head[3].split()[1]
+def deparsing(http):
+
+    body=http.get("Body")
+    head_dict = {
+                 "Host": http.get("Host"),
+                 "Port": http.get("Port"),
+                 "Type": http.get("Content-Type"),
+                 "Length": http.get("Content-Length")
                  }
     print(head_dict)
-    return head_dict
-
-def deparsing_body(http):
-    Headlines, body = http.split('\n\n')
     return body
 
 def http_creator(mes,host,port,version):
     content_type="text/html"
-    http = ""
-
-    http += f"GET HTTP/{version} 200 OK\n"
-    http += f"Host: {host}:{port}\n"
-    http += f"Content-Type: {content_type}\n"
-    http += f"Content-Length: {len(str(mes))}"
-    http += '\n\n'
-    http += f"{mes}"
+    http = {
+     "Url": f"GET HTTP/{version} 200 OK\n",
+     "Host": host ,
+     "Port": port,
+     "Content-Type": content_type,
+     "Content-Length": len(str(mes)),
+     "Body": mes
+    }
     return http
 
 def client(a,n,b) :
@@ -49,8 +43,7 @@ def client(a,n,b) :
     client.connect((HOST, PORT))
     client.send(json.dumps(http_creator(a[n],HOST,PORT,"Marochkanych")).encode(CODING))
     res=json.loads(read_from_socket(client).decode())
-    b[n]=deparsing_body(res)
-    deparsing_header(res)
+    b[n]=deparsing(res)
     client.close()
 
 def create():

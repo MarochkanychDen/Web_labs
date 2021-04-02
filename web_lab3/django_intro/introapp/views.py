@@ -30,8 +30,6 @@ class ExampleView(APIView):
         calculation_result = Calculator.calculate(request_data.input_value)
         response_data = CalculateResponse(calculation_result)
         response_data_serializer = CalculationResponseSerializer(response_data)
-        if not response_data_serializer.is_valid():
-            return Response(status=500)
         response = Response(response_data_serializer.data)
         return response
 

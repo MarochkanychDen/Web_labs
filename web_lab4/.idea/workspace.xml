@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a25577f3-22b7-4518-aa6c-ceef9f554955" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/web_lab4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web_lab_4/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web_lab_4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web_lab_4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web_lab_4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web_lab_4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laba_4(kontrol)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../laba_4(kontrol)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web_lab3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web_lab3/.idea/web_lab_3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab3/.idea/web_lab_3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web_lab3/django_intro/Client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab3/django_intro/Client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web_lab3/django_intro/django_intro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab3/django_intro/django_intro/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web_lab3/django_intro/introapp/Calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab3/django_intro/introapp/Calculation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web_lab3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab3/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laba_4(kontrol).iml" beforeDir="false" afterPath="$PROJECT_DIR$/../web_lab_4/.idea/web_lab_4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rS3V097voXNiGGYudwuvWdE2aD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Денис\Desktop\зло 2,2\web\kod\Web_labs\web_lab4" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a25577f3-22b7-4518-aa6c-ceef9f554955" name="Default Changelist" comment="" />
+      <created>1618955683470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618955683470</updated>
+    </task>
+    <servers />
+  </component>
+</project>

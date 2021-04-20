@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blacklist</title>
+    <script src="site.js"></script>
+</head>
+<body>
+<h2 align="center">Список кіберспортивних команд</h2>
+<h2 align="center">Список команд</h2>
+<h2 id="list"d align="center"></h2>
+<form>
+    <h4>Отримати всі дані про команди</h4>
+    <input type="button" value="GET" onclick="getAllList()">
+</form>
+<form>
+    <h4>Отримати команду по id</h4>
+    <p><input type="number" min="0" id="get_id"></p>
+    <input type="button" value="GET" onclick="getOne()">
+</form>
+<form>
+    <h4>Створити команду</h4>
+    <p><input type="text" placeholder="Name: " id="name"></p>
+    <p><input type="text" placeholder="Discipline:" id="Discipline"></p>
+    <input type="button" value="PUT" onclick="createOne()">
+</form>
+<form>
+    <h4>Оновити команду</h4>
+    <input type="number" placeholder="id" id="update_id">
+    <p><input type="text" placeholder="Name: " id="upName"></p>
+    <p><input type="text" placeholder="Discipline:" id="upDiscipline"></p>
+    <input type="button" value="POST" onclick="updateOne()">
+</form>
+<form>
+    <h4>Видалити команду</h4>
+    <p><input type="number" placeholder="id" id="delete_id"></p>
+    <input type="button" value="DELETE" onclick="deleteOne()">
+</form>
+</body>
+</html>

@@ -13,7 +13,7 @@ class teams(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return self.nameсцици
 
     def __str__(self):
         return self.discipline
